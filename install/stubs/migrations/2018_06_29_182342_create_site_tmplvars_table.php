@@ -16,7 +16,7 @@ class CreateSiteTmplvarsTable extends Migration {
 		{
 			$table->integer('id', true);
 			$table->string('type', 50)->default('');
-			$table->string('name', 50)->default('');
+			$table->string('name', 50)->default('')->index('name');
 			$table->string('caption', 80)->default('');
 			$table->string('description')->default('');
 			$table->integer('editor_type')->default(0)->comment('0-plain text,1-rich text,2-code editor');
